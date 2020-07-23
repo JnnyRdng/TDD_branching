@@ -61,11 +61,19 @@ class CompoundInterestTest(unittest.TestCase):
         self.assertEqual(118380.16, compound.with_contributions(1000))
 
     # Should return 156,093.99 given 100 principal, 5 percent, 10 years, 1000 per month
-    
+    def test_add_1000_per_month_10_years(self):
+        compound = CompoundInterest(100, 5, 10)
+        self.assertEqual(156093.99, compound.with_contributions(1000))
+
     # Should return 475,442.59 given 116028.86, 7.5 percent, 8 years, 2006 per month
+    def test_add_2006_per_month_8_years(self):
+        compound = CompoundInterest(116028.86, 7.5, 8)
+        self.assertEqual(475442.59, compound.with_contributions(2006))
 
-    # Should return 718,335.96 given 116028.86 principal, 9 percent, 12 years, 1456 per month
-
+    # Should return 718,335.97 given 116028.86 principal, 9 percent, 12 years, 1456 per month
+    def test_add_1456_per_month_8_years(self):
+        compound = CompoundInterest(116028.86, 9, 12)
+        self.assertEqual(718335.97, compound.with_contributions(1456))
 
 if __name__ == "__main__":
     unittest.main()
