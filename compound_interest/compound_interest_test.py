@@ -19,6 +19,10 @@ class CompoundInterestTest(unittest.TestCase):
         compound = CompoundInterest(100, 10, 20)
         self.assertEqual(10, compound.years)
 
+    def test_has_frequency_property(self):
+        compound = CompoundInterest(100, 10, 20)
+        self.assertEqual(12, compound.frequency)
+
     # Should return 732.81 given 100 principal, 10 percent, 20 years
 
     # Should return 181.94 given 100 principal, 6 percent, 10 years
