@@ -7,14 +7,15 @@ class CompoundInterest:
 
     def get_interest(self):
         power = self.years * self.frequency
-        return self.principal * (1 + (self.percent / self.frequency)) ** power
+        result = self.principal * (1 + (self.percent / self.frequency)) ** power
+        return round(result, 2)
 
 
 
 
 
 
-# A = P(1 + r/n)nt
+# A = P(1 + r/n)**nt
 
 # Where:
 
