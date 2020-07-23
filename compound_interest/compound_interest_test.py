@@ -5,7 +5,11 @@ from compound_interest import CompoundInterest
 class CompoundInterestTest(unittest.TestCase):
 
     # Tests
-
+    # Should have principal property
+    def test_has_principal_property(self):
+        compound = CompoundInterest(100)
+        self.assertEqual(100, compound.principal)
+        
     # Should return 732.81 given 100 principal, 10 percent, 20 years
 
     # Should return 181.94 given 100 principal, 6 percent, 10 years
