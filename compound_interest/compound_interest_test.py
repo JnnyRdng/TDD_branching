@@ -13,7 +13,7 @@ class CompoundInterestTest(unittest.TestCase):
     # Should have percent property
     def test_has_percent_property(self):
         compound = CompoundInterest(100, 10, 20)
-        self.assertEqual(10, compound.percent)
+        self.assertEqual(0.1, compound.percent)
 
     def test_has_years_property(self):
         compound = CompoundInterest(100, 10, 20)
