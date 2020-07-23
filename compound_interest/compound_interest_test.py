@@ -32,15 +32,25 @@ class CompoundInterestTest(unittest.TestCase):
         compound = CompoundInterest(100, 10, 20)
         self.assertEqual(732.81, compound.get_interest())
 
-
     # Should return 181.94 given 100 principal, 6 percent, 10 years
+    def test_given_100_6_10(self):
+        compound = CompoundInterest(100, 6, 10)
+        self.assertEqual(181.94, compound.get_interest())
 
     # Should return 149,058.55 given 100000 principal, 5 percent, 8 years
+    def test_given_100000_5_8(self):
+        compound = CompoundInterest(100000, 5, 8)
+        self.assertEqual(149058.55, compound.get_interest())
 
     # Should return 0.00 given 0 principal, 10 percent, 1 year
+    def test_given_0_10_1(self):
+        compound = CompoundInterest(0, 10, 1)
+        self.assertEqual(0, compound.get_interest())
 
     # Should return 100.00 given 100 principal, 0 percent, 10 years
-
+    def test_given_100_0_10(self):
+        compound = CompoundInterest(100, 0, 10)
+        self.assertEqual(100, compound.get_interest())
 
     # Extention tests
 
