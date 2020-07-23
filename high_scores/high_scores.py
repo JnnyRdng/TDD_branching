@@ -10,3 +10,6 @@ def personal_best(scores):
 def personal_top_three(scores):
     scores.sort()
     return scores[-3:]
+
+def highest_to_lowest(scores):
+    pass
