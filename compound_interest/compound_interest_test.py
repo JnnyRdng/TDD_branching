@@ -29,7 +29,7 @@ class CompoundInterestTest(unittest.TestCase):
         self.assertIsNotNone(compound.get_interest())
 
     def test_given_100_10_20(self):
-        compound = CompoundInterest(100, 6, 10)
+        compound = CompoundInterest(100, 10, 20)
         self.assertEqual(732.81, compound.get_interest())
 
 
