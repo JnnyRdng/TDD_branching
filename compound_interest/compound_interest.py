@@ -6,7 +6,7 @@ class CompoundInterest:
         self.frequency = 12
 
     def get_interest(self):
-        pass
+        return self.principal
 
 
 
