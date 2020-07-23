@@ -5,7 +5,8 @@ class CompoundInterest:
         self.years = years
         self.frequency = 12
 
-
+    def get_interest(self):
+        pass
 
 
 
