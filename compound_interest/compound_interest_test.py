@@ -7,7 +7,7 @@ class CompoundInterestTest(unittest.TestCase):
     # Tests
     # Should have principal property
     def test_has_principal_property(self):
-        compound = CompoundInterest(100)
+        compound = CompoundInterest(100, 10)
         self.assertEqual(100, compound.principal)
     
     # Should have percent property
