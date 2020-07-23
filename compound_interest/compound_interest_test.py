@@ -7,13 +7,17 @@ class CompoundInterestTest(unittest.TestCase):
     # Tests
     # Should have principal property
     def test_has_principal_property(self):
-        compound = CompoundInterest(100, 10)
+        compound = CompoundInterest(100, 10, 20)
         self.assertEqual(100, compound.principal)
     
     # Should have percent property
     def test_has_percent_property(self):
-        compound = CompoundInterest(100, 10)
+        compound = CompoundInterest(100, 10, 20)
         self.assertEqual(10, compound.percent)
+
+    def test_has_years_property(self):
+        compound = CompoundInterest(100, 10, 20)
+        self.assertEqual(10, compound.years)
 
     # Should return 732.81 given 100 principal, 10 percent, 20 years
 
