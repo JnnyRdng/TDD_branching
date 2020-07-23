@@ -11,8 +11,9 @@ class CompoundInterest:
         return round(result, 2)
 
     def with_contributions(self, amount):
-        return amount
-
+        total = (amount * ((((1 + (self.percent / self.frequency)) ** (self.years * self.frequency)) - 1) / (self.percent / self.frequency))) * (1 + (self.percent / self.frequency))
+    
+        return round(total + self.get_interest(), 2)
 
 
 
@@ -25,3 +26,10 @@ class CompoundInterest:
 # t is the number of years the amount is invested
 # n is the number of times the interest is compounded per year
 # A is the amount at the end of the investment
+
+
+#(m * ((((1 + (r / n)) ** (t * n)) - 1) / (r / n))) * (1 + (r / n))
+
+
+
+
