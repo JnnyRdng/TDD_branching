@@ -28,11 +28,7 @@ class CompoundInterestTest(unittest.TestCase):
         compound = CompoundInterest(100, 10, 20)
         self.assertIsNotNone(compound.get_interest())
 
-    # Function needs to be constructed - test piece by piece
-    def test_power_is_calculated(self):
-        compound = CompoundInterest(100, 10, 20)
-        self.assertEqual(240, compound.power)
-
+    
 
     # Should return 181.94 given 100 principal, 6 percent, 10 years
 
