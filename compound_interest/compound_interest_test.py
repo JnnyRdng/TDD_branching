@@ -33,26 +33,32 @@ class CompoundInterestTest(unittest.TestCase):
         compound = CompoundInterest(100, 10, 20)
         self.assertEqual(732.81, compound.get_interest())
 
-
     # Should return 181.94 given 100 principal, 6 percent, 10 years
+    def test_given_100_6_10(self):
+        compound = CompoundInterest(100, 6, 10)
+        self.assertEqual(181.94, compound.get_interest())
 
     # Should return 149,058.55 given 100000 principal, 5 percent, 8 years
+    def test_given_100000_5_8(self):
+        compound = CompoundInterest(100000, 5, 8)
+        self.assertEqual(149058.55, compound.get_interest())
 
     # Should return 0.00 given 0 principal, 10 percent, 1 year
+    def test_given_0_10_1(self):
+        compound = CompoundInterest(0, 10, 1)
+        self.assertEqual(0, compound.get_interest())
 
     # Should return 100.00 given 100 principal, 0 percent, 10 years
-
+    def test_given_100_0_10(self):
+        compound = CompoundInterest(100, 0, 10)
+        self.assertEqual(100, compound.get_interest())
 
     # Extention tests
 
     # Should return 118,380.16 given 100 principal, 5 percent, 8 years, 1000 per month
-    def test_per_month_property_not_passed(self):
-        compound = CompoundInterest(100, 5, 8)
-        self.assertEqual(1, compound.per_month)
-    def test_per_month_property_passed(self):
-        compound = CompoundInterest(100, 5, 8, 1000)
-        self.assertEqual(1000, compound.per_month)
-  
+    def test_add_1000_per_month_passed_as_argument(self):
+        compound = CompoundInterest(1000, 5, 8)
+        self.assertEqual(1000, compound.with_contributions(1000))
 
     # Should return 156,093.99 given 100 principal, 5 percent, 10 years, 1000 per month
 

@@ -1,18 +1,17 @@
 class CompoundInterest:
-    def __init__(self, principal, percent, years, per_month=1):
+    def __init__(self, principal, percent, years):
         self.principal = principal
         self.percent = percent/100
         self.years = years
         self.frequency = 12
-        self.per_month = per_month
-
 
     def get_interest(self):
         power = self.years * self.frequency
         result = self.principal * (1 + (self.percent / self.frequency)) ** power
         return round(result, 2)
 
-
+    def with_contributions(self, amount):
+        return amount
 
 
 
