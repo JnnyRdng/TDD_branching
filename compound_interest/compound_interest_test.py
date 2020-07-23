@@ -26,7 +26,9 @@ class CompoundInterestTest(unittest.TestCase):
     # Should return 732.81 given 100 principal, 10 percent, 20 years
     def test_call_get_interest_function(self):
         compound = CompoundInterest(100, 10, 20)
-        self.assertEqual(None, compound.get_interest())
+        self.assertIsNotNone(compound.get_interest())
+
+    
 
     # Should return 181.94 given 100 principal, 6 percent, 10 years
 
