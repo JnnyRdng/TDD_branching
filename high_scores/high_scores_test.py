@@ -9,18 +9,18 @@ class HighScoresTest(unittest.TestCase):
 
     # Tests
     def setUp(self):
-        self.score_1 = [6, 8, 3, 1, 9, 4]
-        self.score_2 = [8, 7, 4, 9, 3, 8]
-        self.score_3 = [8, 4]
-        self.score_4 = [7]
+        self.scores_1 = [6, 8, 3, 1, 9, 4]
+        self.scores_2 = [8, 7, 4, 9, 3, 8]
+        self.scores_3 = [8, 4]
+        self.scores_4 = [7]
 
     # Test latest score (the last thing in the list)
-    def test_latest_score(self):
-        self.assertEqual(4, latest(self.score_1))
+    def test_latest_scores(self):
+        self.assertEqual(4, latest(self.scores_1))
 
-    # Test personal best (the highest score in the list)
-    def test_highest_score(self):
-        self.assertEqual(9, personal_best(self.score_1))
+    # Test personal best (the highest scoresin the list)
+    def test_highest_scores(self):
+        self.assertEqual(9, personal_best(self.scores_1))
 
     # Test top three from list of scores
     def test_return_3_from_list(self):

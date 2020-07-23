@@ -8,4 +8,4 @@ def personal_best(scores):
 
 
 def personal_top_three(scores):
-    pass
+    return scores[-3:]
