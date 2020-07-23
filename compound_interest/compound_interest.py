@@ -1,7 +1,7 @@
 class CompoundInterest:
     def __init__(self, principal, percent, years):
         self.principal = principal
-        self.percent = percent
+        self.percent = percent/100
         self.years = years
         self.frequency = 12
 
