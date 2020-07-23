@@ -2,6 +2,7 @@ import unittest
 
 from compound_interest import CompoundInterest
 
+
 class CompoundInterestTest(unittest.TestCase):
 
     # Tests
@@ -9,7 +10,7 @@ class CompoundInterestTest(unittest.TestCase):
     def test_has_principal_property(self):
         compound = CompoundInterest(100, 10, 20)
         self.assertEqual(100, compound.principal)
-    
+
     # Should have percent property
     def test_has_percent_property(self):
         compound = CompoundInterest(100, 10, 20)
@@ -55,6 +56,13 @@ class CompoundInterestTest(unittest.TestCase):
     # Extention tests
 
     # Should return 118,380.16 given 100 principal, 5 percent, 8 years, 1000 per month
+    def test_per_month_property_not_passed(self):
+        compound = CompoundInterest(100, 5, 8)
+        self.assertEqual(1, compound.per_month)
+    def test_per_month_property_passed(self):
+        compound = CompoundInterest(100, 5, 8, 1000)
+        self.assertEqual(1000, compound.per_month)
+  
 
     # Should return 156,093.99 given 100 principal, 5 percent, 10 years, 1000 per month
 
