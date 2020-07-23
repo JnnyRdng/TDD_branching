@@ -17,7 +17,7 @@ class CompoundInterestTest(unittest.TestCase):
 
     def test_has_years_property(self):
         compound = CompoundInterest(100, 10, 20)
-        self.assertEqual(10, compound.years)
+        self.assertEqual(20, compound.years)
 
     def test_has_frequency_property(self):
         compound = CompoundInterest(100, 10, 20)
